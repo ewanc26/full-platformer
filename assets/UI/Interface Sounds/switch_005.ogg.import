@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4b832xcwgvf8"
+path="res://.godot/imported/switch_005.ogg-eed4368840ee2d695e6a32d98e94507d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/UI/Interface Sounds/switch_005.ogg"
+dest_files=["res://.godot/imported/switch_005.ogg-eed4368840ee2d695e6a32d98e94507d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

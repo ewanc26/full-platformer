@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wqhwjwlw4yp3"
+path="res://.godot/imported/bong_001.ogg-5213a845a9416ae284c725392ea30a1f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/UI/Interface Sounds/bong_001.ogg"
+dest_files=["res://.godot/imported/bong_001.ogg-5213a845a9416ae284c725392ea30a1f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
