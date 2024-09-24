@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://22cncij7l10q"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0tcen"]
+[ext_resource type="FontFile" uid="uid://gd2edrrs3dt" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="2_hdjr5"]
+[ext_resource type="AudioStream" uid="uid://c03ffqd45csq1" path="res://assets/UI/Interface Sounds/tick_002.ogg" id="2_liw73"]
+[ext_resource type="AudioStream" uid="uid://b4ivjrv3566ca" path="res://assets/UI/Interface Sounds/click_003.ogg" id="2_pdfod"]
+[ext_resource type="FontFile" uid="uid://dfwvpqyrvml1c" path="res://assets/Fonts/PixelOperator8.ttf" id="3_my5r6"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0tcen")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hdjr5")
+theme_override_font_sizes/font_size = 48
+text = "Platformer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_my5r6")
+theme_override_font_sizes/font_size = 23
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_my5r6")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="navigation" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(576, 324)
+stream = ExtResource("2_liw73")
+bus = &"UI"
+
+[node name="click" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(576, 324)
+stream = ExtResource("2_pdfod")
+bus = &"UI"
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
