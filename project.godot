@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-UISounds="*res://scripts/ui_sounds.gd"
-UILogic="*res://scripts/ui_logic.gd"
+UILogic="*res://scripts/globals/ui_logic.gd"
+UISounds="*res://scripts/globals/ui_sounds.gd"
 
 [input]
 
