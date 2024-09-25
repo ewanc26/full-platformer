@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://22cncij7l10q"]
+[gd_scene load_steps=6 format=3 uid="uid://22cncij7l10q"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0tcen"]
 [ext_resource type="FontFile" uid="uid://gd2edrrs3dt" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="2_hdjr5"]
-[ext_resource type="AudioStream" uid="uid://c03ffqd45csq1" path="res://assets/UI/Interface Sounds/tick_002.ogg" id="2_liw73"]
 [ext_resource type="FontFile" uid="uid://dfwvpqyrvml1c" path="res://assets/Fonts/PixelOperator8.ttf" id="3_my5r6"]
 [ext_resource type="PackedScene" uid="uid://bvkw44qc0jvb8" path="res://scenes/menus/menu_background.tscn" id="4_xrw0s"]
-[ext_resource type="AudioStream" uid="uid://di7grd3vyekym" path="res://assets/UI/Interface Sounds/select_001.ogg" id="5_i1maf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sl8n2"]
 font_size = 48
@@ -22,18 +20,6 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0tcen")
-
-[node name="Audio" type="Node" parent="."]
-
-[node name="navigation" type="AudioStreamPlayer2D" parent="Audio"]
-position = Vector2(576, 324)
-stream = ExtResource("2_liw73")
-bus = &"UI"
-
-[node name="click" type="AudioStreamPlayer2D" parent="Audio"]
-position = Vector2(576, 324)
-stream = ExtResource("5_i1maf")
-bus = &"UI"
 
 [node name="Background" parent="." instance=ExtResource("4_xrw0s")]
 

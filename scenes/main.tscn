@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://b24jv1scgcrpb"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0xvys"]
+[ext_resource type="PackedScene" uid="uid://22cncij7l10q" path="res://scenes/menus/main_menu.tscn" id="1_5jst3"]
+[ext_resource type="Script" path="res://scripts/classes/level_data.gd" id="2_sqqex"]
+
+[sub_resource type="Resource" id="Resource_a3wa4"]
+script = ExtResource("2_sqqex")
+level_id = 1
+level_name = "Level 1"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_01"
+
+[sub_resource type="Resource" id="Resource_jv73u"]
+script = ExtResource("2_sqqex")
+level_id = 2
+level_name = "Level 2"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_02"
+
+[sub_resource type="Resource" id="Resource_gu74f"]
+script = ExtResource("2_sqqex")
+level_id = 3
+level_name = "Level 3"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_03"
+
+[sub_resource type="Resource" id="Resource_datqp"]
+script = ExtResource("2_sqqex")
+level_id = 4
+level_name = "Level 4"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_04"
+
+[sub_resource type="Resource" id="Resource_slru4"]
+script = ExtResource("2_sqqex")
+level_id = 5
+level_name = "Level 5"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_05"
+
+[sub_resource type="Resource" id="Resource_wxs7g"]
+script = ExtResource("2_sqqex")
+level_id = 6
+level_name = "Level 6"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_06"
+
+[sub_resource type="Resource" id="Resource_o5v06"]
+script = ExtResource("2_sqqex")
+level_id = 7
+level_name = "Level 7"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_07"
+
+[sub_resource type="Resource" id="Resource_e6hmd"]
+script = ExtResource("2_sqqex")
+level_id = 8
+level_name = "Level 8"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_08"
+
+[sub_resource type="Resource" id="Resource_3daqq"]
+script = ExtResource("2_sqqex")
+level_id = 9
+level_name = "Level 9"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_09"
+
+[sub_resource type="Resource" id="Resource_l4imu"]
+script = ExtResource("2_sqqex")
+level_id = 10
+level_name = "Level 10"
+level_completed = false
+level_unlocked = false
+level_path = "levels/level_10"
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0xvys")
+available_levels = Array[ExtResource("2_sqqex")]([SubResource("Resource_a3wa4"), SubResource("Resource_jv73u"), SubResource("Resource_gu74f"), SubResource("Resource_datqp"), SubResource("Resource_slru4"), SubResource("Resource_wxs7g"), SubResource("Resource_o5v06"), SubResource("Resource_e6hmd"), SubResource("Resource_3daqq"), SubResource("Resource_l4imu")])
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Main Menu" parent="UI" instance=ExtResource("1_5jst3")]
+
+[node name="2DScene" type="Node2D" parent="."]
