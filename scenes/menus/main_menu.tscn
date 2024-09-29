@@ -28,9 +28,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 320.0
-offset_top = 216.0
+offset_top = 204.0
 offset_right = 846.0
-offset_bottom = 400.0
+offset_bottom = 412.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -73,6 +73,13 @@ theme_override_fonts/font = ExtResource("3_my5r6")
 theme_override_font_sizes/font_size = 24
 text = "Quit"
 flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background"]
+offset_left = 8.0
+offset_top = 608.0
+offset_right = 392.0
+offset_bottom = 640.0
+text = "Made by Ewan Croft (https://ewancroft.uk)"
 
 [connection signal="focus_entered" from="Background/MarginContainer/VBoxContainer/StartButton" to="." method="_on_button_focus_entered"]
 [connection signal="mouse_entered" from="Background/MarginContainer/VBoxContainer/StartButton" to="." method="_on_button_mouse_entered"]
